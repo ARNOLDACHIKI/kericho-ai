@@ -99,6 +99,11 @@ exports.handleWebhook = async (req, res) => {
         rememberMessageId(messageId);
       }
 
+      // Show typing immediately, then continue processing asynchronously.
+      void sendTypingIndicator(from, message.phoneNumberId).catch((err) => {
+        logger.info({ err, from }, "Typing indicator pre-send failed");
+      });
+
       logger.info(
         { requestUrl: req.originalUrl, from, textPreview: text.slice(0, 80) },
         "Incoming WhatsApp message (enqueued)"
@@ -112,9 +117,6 @@ exports.handleWebhook = async (req, res) => {
           handler: async (job) => {
             const { from: f, text: t, phoneNumberId: pId } = job.payload || {};
             try {
-              // Send typing indicator to show we're processing
-              await sendTypingIndicator(f, pId);
-
               const { assistant } = await processIncomingMessage({
                 from: f,
                 text: t,

@@ -1,0 +1,41 @@
+[
+  {
+    "category": "General Health",
+    "questions": [
+      {
+        "q": "I'm not feeling well. What should I do?",
+        "a": "If you're experiencing symptoms, rest and stay hydrated. Monitor your symptoms for 24-48 hours. If symptoms worsen or persist, visit a nearby healthcare facility or call your health provider."
+      },
+      {
+        "q": "How often should I visit a healthcare provider for a check-up?",
+        "a": "Generally, visit annually for preventive care. For specific conditions, follow your doctor's recommendations. Pregnant women should visit for antenatal care as recommended."
+      }
+    ]
+  },
+  {
+    "category": "Hygiene & Sanitation",
+    "questions": [
+      {
+        "q": "How can I prevent waterborne diseases?",
+        "a": "1. Drink clean, boiled, or treated water\n2. Wash hands before eating\n3. Wash food before cooking\n4. Use clean utensils\n5. Keep toilets clean and maintained"
+      },
+      {
+        "q": "When should I wash my hands?",
+        "a": "Wash hands:\n- Before eating or preparing food\n- After using the toilet\n- After handling animals\n- After blowing your nose\n- When hands are visibly dirty"
+      }
+    ]
+  },
+  {
+    "category": "Child Health",
+    "questions": [
+      {
+        "q": "What vaccinations does my child need?",
+        "a": "Children should receive routine immunizations:\n- Birth: BCG, OPV, HP B\n- 6 weeks, 10 weeks, 14 weeks: PENTA, OPV, PCV, Rotavirus\n- 9 months: Measles\n- 18 months: Booster doses\nConsult your health facility for the complete immunization schedule."
+      },
+      {
+        "q": "My child has diarrhea. What should I do?",
+        "a": "1. Give oral rehydration solution (ORS)\n2. Continue feeding\n3. Keep child clean\n4. Seek medical help if:\n   - Diarrhea lasts more than 3 days\n   - Severe dehydration signs appear\n   - Blood in stool\n   - High fever"
+      }
+    ]
+  }
+]

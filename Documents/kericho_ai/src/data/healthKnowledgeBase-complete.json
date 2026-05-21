@@ -1,0 +1,90 @@
+{
+  "malaria": [
+    {
+      "id": "malaria-001",
+      "title": "Malaria Prevention and Symptoms",
+      "keywords": ["malaria", "mosquito", "fever", "chills", "disease", "bite"],
+      "content": "I am not a doctor. To prevent malaria: 1) Sleep under treated nets, 2) Remove stagnant water near your home, 3) Wear long sleeves when possible. If you develop fever, chills, or body aches, visit a health facility for testing. Early treatment saves lives.",
+      "contentSwahili": "Mimi si daktari. Ili kuzuia malaria: 1) Lala chini ya mtungi unaozuiliwa na dawa, 2) Ondoa maji yamiyomvu karibu na nyumba, 3) Vaa gauni za muda mrefu. Ikiwa na homa au mapepo, nenda kwa kituo cha afya kwa kupima. Kutibu mapema kunasalimisha maisha.",
+      "source": "Kenya Ministry of Health",
+      "tags": ["prevention", "symptoms", "infectious-disease"]
+    }
+  ],
+  "maternal_health": [
+    {
+      "id": "maternal-001",
+      "title": "Safe Pregnancy and Antenatal Care",
+      "keywords": ["pregnant", "pregnancy", "antenatal", "mother", "baby", "mimba"],
+      "content": "I am not a doctor. For a healthy pregnancy: 1) Start antenatal care early, 2) Attend all clinic visits, 3) Take iron supplements, 4) Eat nutritious food, 5) Report danger signs (bleeding, severe headache, chest pain) to a health facility immediately.",
+      "contentSwahili": "Mimi si daktari. Kwa ujauzito salama: 1) Anza huduma za kabla ya kuzaa mapema, 2) Tembea katika kila kliniki, 3) Chukua virutubishi vya chuma, 4) Kula chakula kizuri, 5) Ripoti dalili za hatari (kutoka damu, maumivu makubwa ya kichwa) kwa haraka.",
+      "source": "Kenya Ministry of Health + WHO",
+      "tags": ["pregnancy", "womens-health", "antenatal"]
+    }
+  ],
+  "hiv_aids": [
+    {
+      "id": "hiv-001",
+      "title": "HIV Prevention and Testing",
+      "keywords": ["hiv", "aids", "arv", "pep", "prep", "test", "msambao"],
+      "content": "I am not a doctor. For HIV prevention: 1) Test regularly at a clinic, 2) Use protection consistently, 3) Know your status, 4) If exposed, seek PEP treatment within 72 hours. If positive, ARV treatment keeps you healthy. Seek professional HIV care at a health facility.",
+      "contentSwahili": "Mimi si daktari. Ili kuzuia HIV: 1) Jiulize kwa kawaida kwa kliniki, 2) Tumia njia ya ulinzi bila kumkatakata, 3) Jua hali yako, 4) Ikiwa umesambaa, tafuta PEP ndani ya saa 72. Ikiwa chanya, dawa ya ARV inakusambaza salama. Tafuta huduma za HIV kwa kituo cha afya.",
+      "source": "NASCOP Kenya",
+      "tags": ["sexual-health", "prevention", "testing"]
+    }
+  ],
+  "nutrition": [
+    {
+      "id": "nutrition-001",
+      "title": "Balanced Diet and Nutrition",
+      "keywords": ["nutrition", "diet", "food", "vitamins", "balanced", "chakula", "kula"],
+      "content": "I am not a doctor. For good nutrition: 1) Eat vegetables and fruits daily, 2) Include proteins (beans, eggs, fish), 3) Eat whole grains (maize, rice), 4) Drink clean water, 5) Limit sugar and salt. A healthy diet strengthens your immune system. Consult a health worker for specific dietary needs.",
+      "contentSwahili": "Mimi si daktari. Kwa wino nzuri: 1) Kula mboga na matunda kila siku, 2) Jumuisha protini (maharagwe, mayai, samaki), 3) Kula nafaka kamili, 4) Kunywa maji safi, 5) Zuia sukari na chumvi. Chakula kizuri kinakuza kinga. Muuliza kampi sehemu ya hutaka katika mwili wako.",
+      "source": "WHO Nutrition Guidance",
+      "tags": ["nutrition", "diet", "wellness"]
+    }
+  ],
+  "mental_health": [
+    {
+      "id": "mental-001",
+      "title": "Mental Health and Stress Management",
+      "keywords": ["stress", "depression", "anxiety", "mental", "sleep", "hopeless", "worried"],
+      "content": "I am not a doctor. For mental wellness: 1) Talk to friends or family, 2) Get 7-8 hours sleep, 3) Exercise regularly, 4) Reduce stress through prayer/meditation, 5) Seek professional help if you feel hopeless. There is no shame in mental health care. Visit a health facility to speak with a counselor.",
+      "contentSwahili": "Mimi si daktari. Kwa afya ya akili: 1) Zungumza na rafiki au familia, 2) Lala saa 7-8 kila usiku, 3) Tumia hadhahadha kila siku, 4) Kupunguza mkazo kupitia dua, 5) Tafuta msaada wa elimu ikiwa hata karibu. Hakuna aibu katika huduma za akili. Nenda kwa kituo cha afya ili kuzungumza na mwaliko.",
+      "source": "WHO mhGAP",
+      "tags": ["mental-health", "wellness", "stress"]
+    }
+  ],
+  "waterborne_diseases": [
+    {
+      "id": "water-001",
+      "title": "Preventing Waterborne Diseases (Cholera, Typhoid, Diarrhea)",
+      "keywords": ["water", "diarrhea", "cholera", "typhoid", "sanitation", "hygiene", "disease"],
+      "content": "I am not a doctor. To prevent waterborne diseases: 1) Boil drinking water or use clean water source, 2) Wash hands with soap before eating, 3) Use a toilet (not open defecation), 4) Keep food covered from flies, 5) If diarrhea persists, seek medical care. Proper sanitation saves lives.",
+      "contentSwahili": "Mimi si daktari. Ili kuzuia magonjwa ya maji: 1) Chemsha maji au tumia chanzo salama, 2) Osha mikono kwa sabuni kabla ya kula, 3) Tumia choo (sio tufuli), 4) Funika chakula kutoka kwenye inzi, 5) Ikiwa kuchanisha kuendelea, tafuta msaada. Usafi unasalimisha maisha.",
+      "source": "Kenya Ministry of Health",
+      "tags": ["waterborne", "sanitation", "hygiene", "prevention"]
+    }
+  ],
+  "child_health": [
+    {
+      "id": "child-001",
+      "title": "Child Health and Immunization",
+      "keywords": ["child", "baby", "vaccine", "immunization", "infant", "mother", "pediatric"],
+      "content": "I am not a doctor. For child health: 1) Follow the immunization schedule at clinics, 2) Give children nutritious food, 3) Provide clean water, 4) Seek care for fever or persistent cough, 5) A child with high fever or difficulty breathing needs urgent care. Ask a health worker about your child's development.",
+      "contentSwahili": "Mimi si daktari. Kwa afya ya mtoto: 1) Fuata mpango wa chanjo kwa kliniki, 2) Peakaji chakula kizuri, 3) Peakaji maji safi, 4) Tafuta msaada kwa homa au kohoma ya kudumu, 5) Mtoto yenye homa juu au taharuki kwa kupumua anahitaji msaada haraka. Uliza kampi juu ya maendeleo ya mtoto wako.",
+      "source": "Kenya Ministry of Health",
+      "tags": ["child-health", "pediatrics", "immunization"]
+    }
+  ],
+  "respiratory_health": [
+    {
+      "id": "respiratory-001",
+      "title": "Respiratory Infections and Cough Management",
+      "keywords": ["cough", "flu", "cold", "respiratory", "pneumonia", "breathing", "kohoma"],
+      "content": "I am not a doctor. For respiratory health: 1) Cover cough/sneeze with tissue, 2) Wash hands regularly, 3) Stay home if sick, 4) Drink warm liquids, 5) If cough persists more than 2 weeks or with blood, seek medical care. Always visit a clinic for difficulty breathing.",
+      "contentSwahili": "Mimi si daktari. Kwa afya ya pumzi: 1) Funika kohoma kwa tishu, 2) Osha mikono mara nyingi, 3) Kaa nyumbani ikiwa mgonjwa, 4) Kunywa vinywaji vya joto, 5) Ikiwa kohoma inaendelea zaidi ya wiki 2 au na damu, tafuta msaada. Nenda kwa kliniki kwa taharuki kwa kupumua.",
+      "source": "Kenya Ministry of Health",
+      "tags": ["respiratory", "cough", "infection"]
+    }
+  ]
+}

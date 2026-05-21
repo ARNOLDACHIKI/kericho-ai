@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Kericho County Referral Hospital",
+    "location": "Kericho",
+    "services": ["general", "maternal", "emergency"]
+  },
+  {
+    "name": "Litein Mission Hospital",
+    "location": "Litein",
+    "services": ["general", "maternity"]
+  },
+  {
+    "name": "Londiani Sub-County Hospital",
+    "location": "Londiani",
+    "services": ["general", "emergency", "maternity"]
+  },
+  {
+    "name": "Ainamoi Sub-County Hospital",
+    "location": "Ainamoi",
+    "services": ["general", "outpatient", "maternal"]
+  },
+  {
+    "name": "Kapkatet Sub-County Hospital",
+    "location": "Kapkatet",
+    "services": ["general", "emergency"]
+  },
+  {
+    "name": "Kipsitet Health Centre",
+    "location": "Kipsitet",
+    "services": ["general", "outpatient"]
+  }
+]

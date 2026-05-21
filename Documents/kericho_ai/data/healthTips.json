@@ -1,0 +1,44 @@
+[
+  {
+    "id": "tip_001",
+    "topic": "malaria",
+    "message_en": "💡 Tip: Sleep under a mosquito net every night to prevent malaria. Make sure the net is intact and tuck it under your mattress.",
+    "message_sw": "💡 Ushauri: Lala chini ya chandarua kila usiku ili kuzuia malaria. Hakikisha chandarua haini na tuckia chini ya kitanda."
+  },
+  {
+    "id": "tip_002",
+    "topic": "nutrition",
+    "message_en": "🥗 Tip: Eat a balanced diet with fruits and vegetables daily. Include proteins, grains, and dairy for optimal health.",
+    "message_sw": "🥗 Ushauri: Kula lishe bora yenye matunda na mboga kila siku. Jaza na protini, nafaka, na uzamili kwa afya nzuri."
+  },
+  {
+    "id": "tip_003",
+    "topic": "hygiene",
+    "message_en": "🚰 Tip: Wash your hands with soap for at least 20 seconds before eating and after using the toilet.",
+    "message_sw": "🚰 Ushauri: Fua mikono yako kwa sabuni kwa dakika 20 angalau kabla ya kula na baada ya choo."
+  },
+  {
+    "id": "tip_004",
+    "topic": "exercise",
+    "message_en": "🏃 Tip: Exercise for at least 30 minutes daily. Walking, running, or dancing are all great options.",
+    "message_sw": "🏃 Ushauri: Fanya mazoezi kwa angalau dakika 30 kila siku. Kutembea, kukimbia, au kusambaza vimba ni chaguo nzuri."
+  },
+  {
+    "id": "tip_005",
+    "topic": "water",
+    "message_en": "💧 Tip: Drink at least 8 glasses of water daily. Staying hydrated helps your body function properly.",
+    "message_sw": "💧 Ushauri: Kunywa angalau glasi 8 za maji kila siku. Kuwa na maji yanaungu husaidia mwili kutenda vizuri."
+  },
+  {
+    "id": "tip_006",
+    "topic": "sleep",
+    "message_en": "😴 Tip: Get 7-8 hours of sleep each night. Good sleep improves your immune system and mental health.",
+    "message_sw": "😴 Ushauri: Lala 7-8 saa kila usiku. Usingizi mzuri inaboresha kinga ya mwili na akili."
+  },
+  {
+    "id": "tip_007",
+    "topic": "vaccination",
+    "message_en": "💉 Tip: Keep up with your vaccinations. Talk to your doctor about which vaccines you need.",
+    "message_sw": "💉 Ushauri: Endelea na chanjo zako. Ongeana na daktari kuhusu chanjo unazohitaji."
+  }
+]

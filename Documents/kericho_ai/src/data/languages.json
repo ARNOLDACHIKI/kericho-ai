@@ -1,0 +1,9 @@
+{
+  "languages": [
+    { "code": "en", "name": "English" },
+    { "code": "sw", "name": "Kiswahili" },
+    { "code": "nandi", "name": "Nandi (Kalenjin)" },
+    { "code": "kipsigis", "name": "Kipsigis (Kalenjin)" },
+    { "code": "kalenjin", "name": "Kalenjin (generic)" }
+  ]
+}

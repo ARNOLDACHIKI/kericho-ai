@@ -1,0 +1,37 @@
+{
+  "malaria_prevention": {
+    "steps": [
+      "Sleep under treated mosquito nets",
+      "Remove stagnant water near your home",
+      "Seek treatment early if you feel unwell"
+    ]
+  },
+  "hiv_prevention": {
+    "steps": [
+      "Use safer sex practices",
+      "Do not share needles or sharp items",
+      "Get tested regularly and speak to a clinician"
+    ]
+  },
+  "maternal_health": {
+    "steps": [
+      "Attend antenatal clinic visits early",
+      "Eat nutritious food and drink safe water",
+      "Visit a health facility for danger signs"
+    ]
+  },
+  "nutrition": {
+    "steps": [
+      "Eat a balanced diet",
+      "Include vegetables, fruits, and proteins",
+      "Limit too much sugar, salt, and processed food"
+    ]
+  },
+  "mental_health": {
+    "steps": [
+      "Rest and sleep enough",
+      "Talk to a trusted person",
+      "Seek professional support if stress continues"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What are symptoms of malaria?",
+    "keywords": ["malaria", "fever", "chills", "headache"],
+    "answer": "Common symptoms include fever, chills, headache, and body aches. Visit a health facility if symptoms persist."
+  },
+  {
+    "question": "How can I prevent HIV/AIDS?",
+    "keywords": ["hiv", "aids", "prevention", "testing"],
+    "answer": "Use safer sex practices, avoid sharing needles, and get tested regularly. Speak to a healthcare professional for guidance."
+  },
+  {
+    "question": "What should mothers do during pregnancy?",
+    "keywords": ["pregnancy", "maternal", "mother", "antenatal"],
+    "answer": "Attend antenatal clinics regularly, eat well, take recommended supplements, and visit a health facility for any danger signs."
+  },
+  {
+    "question": "What is a healthy diet?",
+    "keywords": ["nutrition", "diet", "food", "healthy"],
+    "answer": "A healthy diet includes vegetables, fruits, proteins, whole grains, and clean water every day."
+  },
+  {
+    "question": "How do I care for my mental health?",
+    "keywords": ["mental health", "stress", "anxiety", "depression"],
+    "answer": "Rest well, talk to someone you trust, and seek help from a healthcare professional if stress or sadness continues."
+  }
+]

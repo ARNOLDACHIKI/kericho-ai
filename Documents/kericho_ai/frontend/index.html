@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFYAEDUCATORBOT Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+
+    <main class="dashboard-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AFYAEDUCATORBOT</p>
+          <h1>AFYAEDUCATORBOT Dashboard</h1>
+          <p class="hero-copy">
+            Monitor assistant activity, review recent conversations, and watch for emergency cases in real time.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span class="status-pill" id="connectionStatus">Loading data...</span>
+          <p id="lastUpdated">Last updated: --</p>
+          <button id="logoutButton" class="logout-btn" type="button">Logout</button>
+        </div>
+      </header>
+
+      <section class="card-grid" aria-label="Summary statistics">
+        <article class="stat-card">
+          <span class="stat-label">Total Users</span>
+          <strong id="totalUsers">--</strong>
+          <p id="totalUsersDelta">Users registered in the system</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Total Messages</span>
+          <strong id="totalMessages">--</strong>
+          <p id="totalMessagesDelta">Incoming messages processed</p>
+        </article>
+        <article class="stat-card emergency-card">
+          <span class="stat-label">Emergency Cases</span>
+          <strong id="emergencyCount">--</strong>
+          <p id="emergencyRate">Rate: --</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Top Topics</span>
+          <strong id="topTopics">--</strong>
+          <p id="topTopicsDetails">Most common health topics</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel panel-wide">
+          <div class="panel-header">
+            <h2>Recent Messages</h2>
+            <span>Latest conversations from the assistant</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>User</th>
+                  <th>Topic</th>
+                  <th>Message</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="messagesTableBody">
+                <tr>
+                  <td colspan="5" class="empty-state">Loading messages...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside class="panel panel-side">
+          <div class="panel-header">
+            <h2>Emergency Alerts</h2>
+            <span>Recent urgent cases</span>
+          </div>
+          <div id="emergencyList" class="alert-list">
+            <div class="empty-state compact">Loading emergency alerts...</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel panel-wide">
+          <div class="panel-header">
+            <h2>Live Monitoring</h2>
+            <span>Webhook traffic, logs, and backend health</span>
+          </div>
+          <div class="monitor-grid">
+            <div class="monitor-card">
+              <span class="monitor-label">Webhook Status</span>
+              <strong id="webhookStatus">--</strong>
+              <p id="webhookStatusDetails">Checking webhook and backend health...</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Log Files</span>
+              <strong id="logFileCount">--</strong>
+              <p id="logStatsDetails">Recent runtime and error logs</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Recent Errors</span>
+              <strong id="recentErrorCount">--</strong>
+              <p id="recentErrorDetails">Errors from the latest log file</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Backend Ready</span>
+              <strong id="backendReady">--</strong>
+              <p id="backendReadyDetails">Database and WhatsApp readiness</p>
+            </div>
+          </div>
+
+          <div class="logs-shell">
+            <div class="panel-header inline">
+              <h3>Recent Activity Log</h3>
+              <span id="logTimestamp">Last refreshed: --</span>
+            </div>
+            <div id="activityLog" class="activity-log">
+              <div class="empty-state compact">Loading logs...</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel panel-wide">
+          <div class="panel-header">
+            <h2>Message Queue Status</h2>
+            <span>Async processing pipeline for incoming messages</span>
+          </div>
+          <div class="monitor-grid">
+            <div class="monitor-card">
+              <span class="monitor-label">Total Jobs</span>
+              <strong id="queueTotal">--</strong>
+              <p id="queueTotalDetails">Messages in queue</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Pending</span>
+              <strong id="queuePending">--</strong>
+              <p id="queuePendingDetails">Waiting to process</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Processing</span>
+              <strong id="queueProcessing">--</strong>
+              <p id="queueProcessingDetails">Currently being handled</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Completed</span>
+              <strong id="queueCompleted">--</strong>
+              <p id="queueCompletedDetails">Successfully processed</p>
+            </div>
+            <div class="monitor-card">
+              <span class="monitor-label">Failed</span>
+              <strong id="queueFailed">--</strong>
+              <p id="queueFailedDetails">Errors and retries</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel panel-wide">
+        <div class="panel-header">
+          <h2>System Notes</h2>
+          <span>Admin API overview</span>
+        </div>
+        <div class="notes-grid">
+          <div class="note-box">
+            <h3>Live Metrics</h3>
+            <p>Data is fetched from <code>/admin/stats</code> and refreshed automatically.</p>
+          </div>
+          <div class="note-box">
+            <h3>Recent Messages</h3>
+            <p>The table uses <code>/admin/messages</code> to show the latest activity.</p>
+          </div>
+          <div class="note-box">
+            <h3>Emergency Monitoring</h3>
+            <p>Urgent cases are pulled from <code>/admin/emergencies</code> and highlighted in red.</p>
+          </div>
+          <div class="note-box">
+            <h3>Message Queue</h3>
+            <p>Incoming messages are enqueued for async processing. Query status via <code>/admin/queue</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="errorBanner" class="error-banner hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

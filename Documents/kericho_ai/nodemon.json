@@ -1,0 +1,14 @@
+{
+  "watch": ["src"],
+  "ignore": [
+    "node_modules",
+    "__tests__",
+    ".git",
+    "coverage",
+    "logs",
+    "data"
+  ],
+  "ext": "js,json",
+  "delay": 500,
+  "verbose": true
+}

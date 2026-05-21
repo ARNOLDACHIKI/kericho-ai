@@ -1,0 +1,13 @@
+{
+  "language": "kipsigis",
+  "mappings": {
+    "malaria_intro": "[KIPSIGIS TRANSLATION PENDING] Malaria is a parasitic disease... (translate from EN)",
+    "malaria_prevention": "[KIPSIGIS TRANSLATION PENDING] Prevention steps placeholder (translate from EN)",
+    "malaria_symptoms": "[KIPSIGIS TRANSLATION PENDING] Symptoms placeholder (translate from EN)",
+    "pregnancy_care": "[KIPSIGIS TRANSLATION PENDING] Prenatal care placeholder (translate from EN)",
+    "nutrition_pregnancy": "[KIPSIGIS TRANSLATION PENDING] Nutrition during pregnancy placeholder (translate from EN)",
+    "balanced_diet": "[KIPSIGIS TRANSLATION PENDING] Balanced diet placeholder (translate from EN)",
+    "mental_health_basics": "[KIPSIGIS TRANSLATION PENDING] Mental health placeholder (translate from EN)",
+    "hiv_overview": "[KIPSIGIS TRANSLATION PENDING] HIV overview placeholder (translate from EN)"
+  }
+}

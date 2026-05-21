@@ -1,0 +1,13 @@
+{
+  "language": "nandi",
+  "mappings": {
+    "malaria_intro": "[NANDI TRANSLATION PENDING] Malaria en akiito ne thougho che mitoiyet. Original (EN): Malaria is a parasitic disease transmitted through the bites of infected mosquitoes...",
+    "malaria_prevention": "[NANDI TRANSLATION PENDING] Chekwet ab malaria: koitoibi nets, koitoibi kebetet, koret ap esin. Original (EN): Prevent malaria by: 1. Using insecticide-treated bed nets...",
+    "malaria_symptoms": "[NANDI TRANSLATION PENDING] Symptoms: high fever, chills, headache. Original (EN): Common symptoms appear 10-15 days after mosquito bite...",
+    "pregnancy_care": "[NANDI TRANSLATION PENDING] Prenatal care message placeholder. Original (EN): During pregnancy, attend antenatal (ANC) clinics regularly...",
+    "nutrition_pregnancy": "[NANDI TRANSLATION PENDING] Nutrition for pregnancy placeholder. Original (EN): Eat nutritious foods: Proteins, grains, fruits & vegetables...",
+    "balanced_diet": "[NANDI TRANSLATION PENDING] Balanced diet placeholder. Original (EN): A balanced diet includes: Grains, Proteins, Fruits...",
+    "mental_health_basics": "[NANDI TRANSLATION PENDING] Mental health basics placeholder. Original (EN): Mental health is as important as physical health...",
+    "hiv_overview": "[NANDI TRANSLATION PENDING] HIV overview placeholder. Original (EN): HIV is a virus that weakens the immune system..."
+  }
+}

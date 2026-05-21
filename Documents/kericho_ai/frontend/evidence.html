@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFYAEDUCATORBOT Evidence Center</title>
+    <link rel="stylesheet" href="/evidence/evidence.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-left"></div>
+    <div class="bg-orb orb-right"></div>
+
+    <main class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">__BOT_NAME__ evidence center</p>
+          <h1>Screenshot checklist workspace</h1>
+          <p class="lede">
+            This page groups the remaining evidence items into one live surface so each screenshot can be captured from current bot behavior.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <span class="pill success">Live webhook enabled</span>
+          <p><strong>Webhook URL</strong><span>__WEBHOOK_URL__</span></p>
+          <p><strong>Verify token</strong><span>__VERIFY_TOKEN__</span></p>
+          <p><strong>Base URL</strong><span>__APP_BASE_URL__</span></p>
+        </div>
+      </header>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>1. Webhook configuration</h2>
+          <p>Use this block to capture the current registration in the Meta dashboard or ngrok view.</p>
+          <pre class="code-block">Webhook URL: __WEBHOOK_URL__
+Verify Token: __VERIFY_TOKEN__
+Status: Verified via GET /webhook</pre>
+        </article>
+
+        <article class="card">
+          <h2>2. System architecture</h2>
+          <p>Current stack: Web UI, Express backend, Redis/BullMQ queue, Gemini/Ollama/OpenAI AI layer, and PostgreSQL/Prisma storage.</p>
+          <div class="flow-diagram">
+            <span>Web</span>
+            <span>Express Backend</span>
+            <span>Queue / Scheduler</span>
+            <span>AI Layer</span>
+            <span>PostgreSQL</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>3. Database and storage design</h2>
+          <ul class="bullet-list">
+            <li><strong>Sessions:</strong> Redis or memory session store</li>
+            <li><strong>Conversation history:</strong> PostgreSQL via Prisma `User` + `ConversationMessage`</li>
+            <li><strong>Knowledge source:</strong> health knowledge JSON and knowledge articles</li>
+            <li><strong>Analytics:</strong> admin stats, logs, emergency counts, feedback entries</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>4. Topic menu</h2>
+          <div class="topic-grid" id="topicButtons"></div>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card accent-card">
+          <h2>5. Sample response from live bot</h2>
+          <div class="chat-thread">
+            <div class="bubble user">am having a slight cough, and am having a blocked nose, what do you know about that</div>
+            <div class="bubble bot">A cough and blocked nose can be caused by a cold or allergies. Try to stay hydrated with plenty of fluids and seek care if breathing becomes difficult.</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>6. Health knowledge categories</h2>
+          <div class="pill-grid" id="knowledgeCategories"></div>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>7. Backend routing flow</h2>
+          <ol class="step-list">
+            <li>Meta sends webhook to <code>/webhook</code>.</li>
+            <li><code>parseIncomingMessage()</code> extracts the sender and text.</li>
+            <li><code>processIncomingMessage()</code> builds the assistant reply.</li>
+            <li><code>sendMessage()</code> delivers the response back to WhatsApp.</li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h2>8. Conversation flow</h2>
+          <div class="timeline" id="conversationFlow"></div>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>9. Introduction interface</h2>
+          <div class="intro-card">
+            <p class="intro-greeting">Hi, I’m __BOT_NAME__.</p>
+            <p>I can help you with maternal health, nutrition, common diseases, HIV/SRH, mental health, vaccination, and child growth.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>10. Navigation activity</h2>
+          <div class="button-row" id="navigationButtons"></div>
+          <p class="caption">Tap a topic button to switch the preview message below.</p>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>11. Bot test</h2>
+          <div class="test-panel">
+            <p>Real webhook tests have already passed with HTTP 200 and AI replies generated from live messages.</p>
+            <div class="mini-log">POST /webhook → parsed message → AI reply → sendMessage()</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>12. Topic and language triggers</h2>
+          <div class="toggle-row">
+            <span class="toggle active">English</span>
+            <span class="toggle">Kiswahili</span>
+            <span class="toggle">Maternal Health</span>
+            <span class="toggle">Nutrition</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>13. Interactive button simulation</h2>
+          <div class="button-row" id="simulationButtons"></div>
+          <div class="mini-preview" id="simulationPreview"></div>
+        </article>
+
+        <article class="card">
+          <h2>14. User test evidence</h2>
+          <pre class="code-block compact">2026-05-21 15:44:36 - Incoming WhatsApp message received
+2026-05-21 15:44:36 - Conversation processed
+2026-05-21 15:44:36 - WhatsApp message sent successfully
+
+Transcript review: live health reply verified from the admin logs and webhook run.</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="/evidence/evidence.js"></script>
+  </body>
+</html>

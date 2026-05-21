@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFYAEDUCATORBOT Admin Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-card">
+        <p class="badge">Admin Access</p>
+        <h1>AFYAEDUCATORBOT Dashboard</h1>
+        <p class="subtitle">Sign in to view analytics and monitor emergency activity.</p>
+
+        <form id="loginForm" class="login-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" required autocomplete="username" />
+
+          <label for="password">Password</label>
+           <div class="password-container">
+             <input id="password" name="password" type="password" required autocomplete="current-password" />
+             <button type="button" id="togglePassword" class="password-toggle">
+               <span class="eye-icon">👁️</span>
+             </button>
+           </div>
+
+          <button type="submit">Login</button>
+        </form>
+
+        <p class="helper-text">Local demo login: <strong>admin</strong> / <strong>ChangeMe123!</strong></p>
+
+        <p id="loginError" class="error hidden"></p>
+      </section>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "malaria": {
+    "symptoms": ["fever", "chills", "headache"],
+    "advice": "Sleep under treated mosquito nets and visit a health facility if symptoms persist."
+  },
+  "hiv_aids": {
+    "symptoms": ["weight loss", "fever", "night sweats"],
+    "advice": "Get tested early and speak to a healthcare professional for guidance and treatment options."
+  },
+  "maternal_health": {
+    "symptoms": ["nausea", "fatigue", "back pain"],
+    "advice": "Attend antenatal clinics regularly and seek help immediately for danger signs."
+  },
+  "nutrition": {
+    "advice": "Eat a balanced diet including vegetables, fruits, and proteins."
+  },
+  "mental_health": {
+    "symptoms": ["sadness", "stress", "anxiety"],
+    "advice": "Talk to someone you trust and visit a healthcare professional if distress continues."
+  }
+}

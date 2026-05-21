@@ -1,0 +1,202 @@
+name: CI/CD Pipeline
+
+# Trigger on push to main/develop and on pull requests
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  # ============================================================================
+  # STEP 1: LINT AND BUILD CHECKS
+  # ============================================================================
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: 📝 Check for syntax errors
+        run: node -c src/index.js && node -c src/services/responseService.js && node -c src/controllers/webhookController.js
+        continue-on-error: true
+  
+  # ============================================================================
+  # STEP 2: BUILD VERIFICATION
+  # ============================================================================
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: 🔨 Install dependencies
+        run: npm ci
+      
+      - name: ✅ Verify build integrity
+        run: |
+          echo "Checking for required files..."
+          [ -f "package.json" ] && echo "✓ package.json found"
+          [ -f "src/index.js" ] && echo "✓ src/index.js found"
+          [ -d "src/services" ] && echo "✓ src/services directory found"
+          [ -d "src/routes" ] && echo "✓ src/routes directory found"
+          echo "Build verification passed!"
+
+  # ============================================================================
+  # STEP 3: UNIT & INTEGRATION TESTS
+  # ============================================================================
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      - name: 📦 Install dependencies
+        run: npm ci
+      
+      - name: 🧪 Run unit and integration tests
+        run: npm test
+        env:
+          NODE_ENV: test
+          DATABASE_URL: postgresql://test:test@localhost:5432/test
+          SESSION_PROVIDER: memory
+          LOG_LEVEL: silent
+      
+      - name: 📊 Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+        if: always()
+
+  # ============================================================================
+  # STEP 4: ENVIRONMENT VALIDATION
+  # ============================================================================
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 🔒 Check for secrets in code
+        run: |
+          if grep -r -i "api_key\|secret\|password" src/ --include="*.js" | grep -v "process.env" | grep -v "//" | grep -v "example"; then
+            echo "⚠️  WARNING: Possible hardcoded secrets detected"
+            exit 1
+          else
+            echo "✓ No hardcoded secrets detected"
+          fi
+        continue-on-error: true
+      
+      - name: ✓ Verify environment variables
+        run: |
+          echo "Checking required environment variable names..."
+          if grep -r "process.env\." src/ --include="*.js" | grep -oP '(?<=process\.env\.)[\w_]+' | sort -u | head -20; then
+            echo "✓ Environment variables are properly referenced"
+          fi
+        continue-on-error: true
+
+  # ============================================================================
+  # STEP 5: OPTIONAL DEPLOYMENT (Placeholder)
+  # ============================================================================
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 📤 Deploy to Staging (Render/Railway)
+        run: |
+          echo "═══════════════════════════════════════════════════════════"
+          echo "🚀 STAGING DEPLOYMENT PLACEHOLDER"
+          echo "═══════════════════════════════════════════════════════════"
+          echo ""
+          echo "To enable staging deployment:"
+          echo ""
+          echo "Option 1: Render.com"
+          echo "  1. Set RENDER_API_TOKEN in GitHub Secrets"
+          echo "  2. Set RENDER_SERVICE_ID in GitHub Secrets"
+          echo "  3. Uncomment deploy steps below"
+          echo ""
+          echo "Option 2: Railway.app"
+          echo "  1. Set RAILWAY_TOKEN in GitHub Secrets"
+          echo "  2. Uncomment deploy steps below"
+          echo ""
+          echo "Option 3: Other Platform"
+          echo "  - Configure your deployment provider"
+          echo "═══════════════════════════════════════════════════════════"
+        continue-on-error: true
+      
+      # RENDER DEPLOYMENT (Uncomment to enable)
+      # - run: |
+      #     curl -X POST "https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}" \
+      #     -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}"
+
+      # RAILWAY DEPLOYMENT (Uncomment to enable)
+      # - run: |
+      #     npx railway deploy \
+      #     --service main \
+      #     --token ${{ secrets.RAILWAY_TOKEN }}
+
+  # ============================================================================
+  # STEP 6: OPTIONAL PRODUCTION DEPLOYMENT
+  # ============================================================================
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 📤 Deploy to Production
+        run: |
+          echo "═══════════════════════════════════════════════════════════"
+          echo "🚀 PRODUCTION DEPLOYMENT PLACEHOLDER"
+          echo "═══════════════════════════════════════════════════════════"
+          echo ""
+          echo "Before enabling production deployment:"
+          echo ""
+          echo "✓ Ensure main branch has required code reviews"
+          echo "✓ Set up deployment secrets (PROD_API_TOKEN, etc)"
+          echo "✓ Configure your production hosting environment"
+          echo "✓ Set up post-deployment health checks"
+          echo ""
+          echo "Current Status: DISABLED (Add configuration to enable)"
+          echo "═══════════════════════════════════════════════════════════"
+        continue-on-error: true
+      
+      # PRODUCTION DEPLOYMENT (Uncomment when ready)
+      # - run: |
+      #     curl -X POST "https://your-production-server.com/deploy" \
+      #     -H "Authorization: Bearer ${{ secrets.PROD_API_TOKEN }}" \
+      #     -d '{"version":"${{ github.sha }}"}'

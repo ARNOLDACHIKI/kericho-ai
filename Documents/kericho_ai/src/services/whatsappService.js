@@ -95,6 +95,10 @@ function hasQRReady() {
   return qrReady;
 }
 
+function isWhatsAppConnected() {
+  return Boolean(getWhatsAppToken() && getPhoneNumberId());
+}
+
 /* =========================
    INIT (DISABLED SAFELY)
 ========================= */
@@ -283,6 +287,7 @@ async function sendTextMessage({ to, body }) {
 module.exports = {
   normalizePhoneNumber,
   hasQRReady,
+  isWhatsAppConnected,
   initiateBaileysConnection,
   disconnectBaileys,
   onIncomingMessage,
